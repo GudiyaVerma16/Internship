@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic News Feed</title>
+    <link rel="stylesheet" href="NewsFeed.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dynamic News Feed</h1>
+      <form id="article-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <textarea
+          id="description"
+          placeholder="Description"
+          rows="3"
+          required
+        ></textarea>
+        <input type="text" id="image-url" placeholder="Image URL (optional)" />
+        <button type="submit">Add Article</button>
+      </form>
+
+      <div class="news-feed" id="news-feed"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script src="NewsFeed.js"></script>
+  </body>
+</html>
