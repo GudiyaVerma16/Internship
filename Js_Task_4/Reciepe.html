@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="Recipe.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recipe Finder</h1>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="ingredient-input"
+          placeholder="Enter ingredients (e.g., tomato, cheese)"
+        />
+        <select id="filter-dropdown">
+          <option value="all">All</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select>
+        <button id="search-btn">Search</button>
+      </div>
+      <div id="recipes-container"></div>
+    </div>
+    <script src="Recipe.js"></script>
+  </body>
+</html>
