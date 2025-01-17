@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Quiz.css" />
+  </head>
+  <body>
+    <div class="quiz-container text-center">
+      <!-- Welcome Screen -->
+      <div id="start-screen">
+        <h2>Welcome to the Mini Quiz App!</h2>
+        <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+      </div>
+
+      <!-- Rules Modal -->
+      <div class="modal fade" id="rules-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Some Rules of this Quiz</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ol>
+                <li>You will have only <b>15 seconds</b> per each question.</li>
+                <li>Once you select your answer, it can't be undone.</li>
+                <li>You can't select any option once time goes off.</li>
+                <li>You can't exit the Quiz while you're playing.</li>
+                <li>You'll get points on the basis of your correct answers.</li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="exit-btn"
+                data-bs-dismiss="modal"
+              >
+                Exit Quiz
+              </button>
+              <button type="button" class="btn btn-primary" id="continue-btn">
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="d-none">
+        <div class="timer" id="timer">
+          Time Left: <span class="times">15s</span>
+        </div>
+        <div id="question" class="question"></div>
+        <div id="answers" class="d-grid gap-2"></div>
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <!-- Score Screen -->
+      <div id="score-screen" class="d-none">
+        <h2>You have completed the quiz!</h2>
+        <p id="final-score" class="score"></p>
+        <button id="replay-btn" class="btn btn-primary">Replay Quiz</button>
+        <button id="quit-btn" class="btn btn-outline-primary">Quit Quiz</button>
+      </div>
+    </div>
+    <script src="Quiz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
